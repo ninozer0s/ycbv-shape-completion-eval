@@ -1,0 +1,6 @@
+[submodule "external/3DSGrasp"]
+	path = external/3DSGrasp
+	url = https://github.com/NunoDuarte/3DSGrasp.git
+[submodule "external/PoinTr"]
+	path = external/PoinTr
+	url = https://github.com/yuxumin/PoinTr.git

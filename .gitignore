@@ -24,3 +24,24 @@ venv/
 
 # system
 .DS_Store
+
+# large model checkpoints
+*.pth
+*.pt
+*.ckpt
+ckpts/
+pretrained/
+weights/
+
+# local experiment data
+data/
+datasets/
+bop_datasets/
+ycbv/
+ycbv_3dsgrasp_eval/
+ycbv_3dsgrasp_eval_filtered/
+
+# generated point clouds
+*.pcd
+*.xyz
+*.ply
