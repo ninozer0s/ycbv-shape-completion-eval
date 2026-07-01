@@ -1,0 +1,51 @@
+FROM pytorch/pytorch:1.11.0-cuda11.3-cudnn8-devel
+
+WORKDIR /workspace/PoinTr
+
+ENV TORCH_CUDA_ARCH_LIST="8.6+PTX"
+ENV FORCE_CUDA=1
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN rm -f /etc/apt/sources.list.d/cuda.list \
+          /etc/apt/sources.list.d/nvidia-ml.list \
+          /etc/apt/sources.list.d/*cuda* \
+          /etc/apt/sources.list.d/*nvidia*
+
+RUN apt-get update && apt-get install -y \
+    git \
+    build-essential \
+    ninja-build \
+    cmake \
+    wget \
+    unzip \
+    ca-certificates \
+    libgl1 \
+    libglib2.0-0 \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY . /workspace/PoinTr
+
+RUN pip install --upgrade pip setuptools wheel
+
+# PoinTr requirements contain old pins like open3d==0.9, so allow this to fail
+RUN pip install -r requirements.txt || true
+
+RUN pip install \
+    easydict \
+    pyyaml \
+    termcolor \
+    timm \
+    tensorboardX \
+    h5py \
+    open3d \
+    opencv-python \
+    matplotlib \
+    scipy \
+    pandas \
+    tqdm
+
+RUN bash install.sh
+
+RUN pip install "git+https://github.com/erikwijmans/Pointnet2_PyTorch.git#egg=pointnet2_ops&subdirectory=pointnet2_ops_lib"
+
+WORKDIR /workspace/PoinTr

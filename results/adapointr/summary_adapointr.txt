@@ -1,0 +1,30 @@
+AdaPoinTr on filtered YCB-V partial point clouds
+=======================================================
+Samples evaluated: 54
+Improved samples: 5 / 54
+
+Mean partial CD-L2 x1000:    111.9261
+Mean AdaPoinTr CD-L2 x1000:  165.8680
+Mean improvement:            -74.32%
+Median improvement:          -50.51%
+
+Mean partial F-score@0.01:    0.0613
+Mean AdaPoinTr F-score@0.01:  0.0346
+Mean partial F-score@0.02:    0.2198
+Mean AdaPoinTr F-score@0.02:  0.0979
+
+Best samples:
+                                   name  obj_id  num_partial_points  num_gt_points  num_adapointr_points  partial_cd_l2_x1000  adapointr_cd_l2_x1000  improvement_percent  partial_fscore_0p01  adapointr_fscore_0p01  partial_fscore_0p02  adapointr_fscore_0p02
+scene000059_im000001_gt000002_obj000006       6                2048           8192                 16384            87.163450              45.984116            47.243808             0.083517               0.069090             0.187181               0.182844
+scene000059_im000001_gt000003_obj000009       9                2048           8192                 16384           261.855208             220.761025            15.693476             0.026155               0.017591             0.076664               0.074796
+scene000051_im000001_gt000001_obj000003       3                2048           8192                 16384            13.676083              11.723902            14.274418             0.240367               0.065105             0.508049               0.185452
+scene000048_im000001_gt000004_obj000020      20                2048           8192                 16384            25.845675              22.864218            11.535613             0.123151               0.133741             0.300513               0.314975
+scene000054_im000001_gt000004_obj000019      19                2048           8192                 16384            13.539195              12.949416             4.356088             0.093106               0.120637             0.270877               0.270639
+
+Worst samples:
+                                   name  obj_id  num_partial_points  num_gt_points  num_adapointr_points  partial_cd_l2_x1000  adapointr_cd_l2_x1000  improvement_percent  partial_fscore_0p01  adapointr_fscore_0p01  partial_fscore_0p02  adapointr_fscore_0p02
+scene000053_im000001_gt000002_obj000013      13                2048           8192                 16384            11.373976             114.901309          -910.212374             0.079107               0.022623             0.378217               0.078039
+scene000055_im000022_gt000004_obj000014      14                2048           8192                 16384            40.559139             148.155145          -265.281776             0.016481               0.001215             0.099551               0.004069
+scene000054_im000001_gt000003_obj000015      15                2048           8192                 16384            24.357230              80.131836          -228.985826             0.070499               0.050303             0.267351               0.140661
+scene000059_im000001_gt000004_obj000015      15                2048           8192                 16384            34.858156             103.186395          -196.017937             0.044172               0.030134             0.200099               0.105127
+scene000059_im000001_gt000005_obj000018      18                2048           8192                 16384            12.594202              35.311889          -180.382096             0.080986               0.106728             0.242687               0.248540

@@ -1,0 +1,22 @@
+3DSGrasp vs AdaPoinTr on filtered YCB-V partial point clouds
+======================================================================
+Samples: 54
+
+Mean Partial CD-L2 x1000:   111.9261
+Mean 3DSGrasp CD-L2 x1000:  221699.5488
+Mean AdaPoinTr CD-L2 x1000: 165.8680
+
+3DSGrasp improved:  0 / 54
+AdaPoinTr improved: 5 / 54
+
+Wins:
+winner
+AdaPoinTr    54
+
+Best 3DSGrasp over AdaPoinTr:
+                                   name  obj_id  partial_cd_l2_x1000  3dsgrasp_cd_l2_x1000  adapointr_cd_l2_x1000  3dsgrasp_improvement_percent  adapointr_improvement_percent    winner         delta
+scene000048_im000001_gt000004_obj000020      20            25.845675          39800.134175              22.864218                -153891.465339                      11.535613 AdaPoinTr -39777.269957
+scene000051_im000001_gt000001_obj000003       3            13.676083          46248.255816              11.723902                -338068.872073                      14.274418 AdaPoinTr -46236.531914
+scene000056_im000001_gt000002_obj000011      11            88.056039          46916.198303             151.294057                 -53179.932633                     -71.815652 AdaPoinTr -46764.904245
+scene000050_im000620_gt000004_obj000015      15            14.076020          49410.950138              16.391668                -350929.267352                     -16.451012 AdaPoinTr -49394.558470
+scene000058_im000030_gt000003_obj000011      11            80.341102          61684.023156             130.253194                 -76677.666394                     -62.125227 AdaPoinTr -61553.769962

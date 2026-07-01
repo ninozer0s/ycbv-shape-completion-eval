@@ -45,3 +45,30 @@ ycbv_3dsgrasp_eval_filtered/
 *.pcd
 *.xyz
 *.ply
+
+# Large datasets / generated data
+bop_datasets/
+data/
+datasets/
+ycbv/
+ycbv_3dsgrasp_eval/
+ycbv_3dsgrasp_eval_filtered/
+
+# Point cloud and completion outputs
+*.pcd
+*.xyz
+*.ply
+*.npy
+
+# Model checkpoints
+*.pth
+*.pt
+*.ckpt
+ckpts/
+pretrained/
+weights/
+external/PoinTr/ckpts/
+
+# Python cache
+__pycache__/
+*.pyc

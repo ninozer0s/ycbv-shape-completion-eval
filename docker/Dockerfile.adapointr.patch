@@ -1,0 +1,42 @@
+FROM adapointr
+
+ENV TORCH_CUDA_ARCH_LIST="8.6+PTX"
+ENV FORCE_CUDA=1
+
+# Fix old requirement pins that break installation
+RUN python - <<'PY'
+from pathlib import Path
+
+src = Path("/workspace/PoinTr/requirements.txt")
+dst = Path("/tmp/requirements_fixed.txt")
+
+s = src.read_text()
+s = s.replace("open3d==0.9", "open3d")
+s = s.replace("opencv_python", "opencv-python")
+s = s.replace("opencv-python==4.1.2.30", "opencv-python")
+
+dst.write_text(s)
+print(dst.read_text())
+PY
+
+RUN pip install -r /tmp/requirements_fixed.txt
+
+# Extra packages that are often missing because the original requirements are old
+RUN pip install \
+    transforms3d \
+    scikit-learn \
+    einops \
+    lmdb \
+    yacs \
+    ninja
+
+# Build all local compiled extensions
+RUN cd /workspace/PoinTr && \
+    for d in extensions/*; do \
+        if [ -f "$d/setup.py" ]; then \
+            echo "Installing $d"; \
+            cd "$d"; \
+            python setup.py install; \
+            cd /workspace/PoinTr; \
+        fi; \
+    done
