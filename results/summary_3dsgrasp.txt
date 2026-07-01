@@ -1,0 +1,24 @@
+3DSGrasp on YCB-V one-image-per-scene subset
+============================================================
+Samples evaluated: 54
+
+Mean partial CD-L2 x1000:   111.9261
+Mean completed CD-L2 x1000: 48.9606
+Mean improvement:           41.17%
+
+Mean partial F-score@0.01:   0.0613
+Mean completed F-score@0.01: 0.0394
+Mean partial F-score@0.02:   0.2198
+Mean completed F-score@0.02: 0.1772
+
+Worst completed CD-L2 x1000 samples:
+scene000056_im000001_gt000001_obj000010: completed=457.3676, partial=601.8835, improvement=24.01%
+scene000058_im000030_gt000000_obj000003: completed=305.1600, partial=511.7683, improvement=40.37%
+scene000059_im000001_gt000003_obj000009: completed=224.4400, partial=261.8552, improvement=14.29%
+scene000049_im000001_gt000003_obj000013: completed=215.8777, partial=232.9493, improvement=7.33%
+scene000056_im000001_gt000000_obj000001: completed=191.3923, partial=450.1863, improvement=57.49%
+scene000048_im000001_gt000000_obj000001: completed=79.1770, partial=279.9922, improvement=71.72%
+scene000058_im000030_gt000001_obj000007: completed=76.3704, partial=133.4513, improvement=42.77%
+scene000055_im000022_gt000003_obj000012: completed=68.6696, partial=246.7051, improvement=72.17%
+scene000050_im000620_gt000003_obj000010: completed=65.1436, partial=15.4022, improvement=-322.95%
+scene000051_im000001_gt000000_obj000001: completed=59.9924, partial=209.5579, improvement=71.37%

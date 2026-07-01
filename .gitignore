@@ -1,0 +1,26 @@
+# datasets / large generated files
+data/
+datasets/
+bop_datasets/
+*.zip
+*.tar
+*.tar.gz
+
+# point clouds
+*.pcd
+*.xyz
+*.ply
+
+# generated completion folders
+completions/
+partials/
+gt/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# system
+.DS_Store
