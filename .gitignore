@@ -72,3 +72,31 @@ external/PoinTr/ckpts/
 # Python cache
 __pycache__/
 *.pyc
+
+# Local datasets and raw generated outputs
+bop_datasets/
+data/
+datasets/
+ycbv/
+ycbv_3dsgrasp_eval/
+ycbv_3dsgrasp_eval_filtered/
+
+# Raw point clouds / meshes / model outputs
+*.pcd
+*.xyz
+*.ply
+*.npy
+
+# Model checkpoints
+*.pth
+*.pt
+*.ckpt
+ckpts/
+pretrained/
+weights/
+external/PoinTr/ckpts/
+external/shape_comp/checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc

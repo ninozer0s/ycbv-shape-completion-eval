@@ -1,0 +1,71 @@
+FROM pytorch/pytorch:1.11.0-cuda11.3-cudnn8-devel
+
+WORKDIR /workspace/shape_comp
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TORCH_CUDA_ARCH_LIST="5.2"
+ENV FORCE_CUDA=1
+ENV MAX_JOBS=2
+
+RUN rm -f /etc/apt/sources.list.d/cuda.list \
+          /etc/apt/sources.list.d/nvidia-ml.list \
+          /etc/apt/sources.list.d/*cuda* \
+          /etc/apt/sources.list.d/*nvidia*
+
+RUN apt-get update && apt-get install -y \
+    git \
+    wget \
+    build-essential \
+    ninja-build \
+    cmake \
+    libgl1 \
+    libglib2.0-0 \
+    libxrender1 \
+    libxext6 \
+    libsm6 \
+    libgomp1 \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY external/shape_comp /workspace/shape_comp
+
+RUN python --version && pip --version
+
+RUN pip install --upgrade "pip<24" setuptools wheel
+
+# Safer base numeric stack for the old PyTorch 1.11 image
+RUN pip install \
+    numpy==1.23.5 \
+    scipy==1.9.3 \
+    pandas==1.4.4 \
+    matplotlib==3.6.3 \
+    scikit-learn==1.2.1 \
+    scikit-image==0.19.3
+
+RUN pip install \
+    open3d==0.16.0 \
+    opencv-python==4.10.0.84 \
+    trimesh==3.12.5 \
+    plyfile==0.7.4 \
+    pyquaternion==0.9.9 \
+    imageio==2.19.3 \
+    networkx==2.8.2 \
+    tqdm==4.64.0 \
+    pyyaml==6.0 \
+    configargparse==1.5.3
+
+RUN pip install \
+    pytorch-lightning==1.6.4 \
+    torchmetrics==0.9.0 \
+    tensorboard==2.9.0 \
+    torch-tb-profiler==0.4.3
+
+RUN pip install \
+    einops==0.6.0 \
+    einops-exts==0.0.4 \
+    rotary-embedding-torch==0.2.1 \
+    dash==2.8.1 \
+    plotly==5.13.0
+
+RUN pip install torch-scatter==2.0.9 -f https://data.pyg.org/whl/torch-1.11.0+cu113.html
+
+WORKDIR /workspace/shape_comp

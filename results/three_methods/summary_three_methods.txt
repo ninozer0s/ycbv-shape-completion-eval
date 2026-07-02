@@ -1,0 +1,19 @@
+Three-method shape completion comparison on YCB-V
+======================================================================
+Samples: 54
+3DSGrasp variant: complete_pc_norm_by_partial
+
+Mean Partial CD-L2 x1000:    112.0530
+Mean 3DSGrasp CD-L2 x1000:   48.8929
+Mean AdaPoinTr CD-L2 x1000:  165.8627
+Mean shape_comp CD-L2 x1000: 119.2808
+
+3DSGrasp improved:   49 / 54
+AdaPoinTr improved:  5 / 54
+shape_comp improved: 28 / 54
+
+Wins by CD-L2:
+winner
+3DSGrasp      49
+shape_comp     3
+AdaPoinTr      2
