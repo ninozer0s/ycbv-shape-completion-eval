@@ -1,0 +1,22 @@
+{
+  "object": "banana",
+  "task": "pick up the banana without damaging it",
+  "is_grasp_task": true,
+  "preferred_grasp_region": "top",
+  "avoid_grasp_region": "middle body",
+  "task_reason": "The banana has delicate skin that is easily bruised if squeezed in the middle. Grasping the top (stem area) allows for a secure lift by holding the fibrous, durable part of the fruit, avoiding damage to the softer flesh.",
+  "geometric_filter_hint": "Target the tapered, narrower end of the elongated object.",
+  "simple_rule": {
+    "preferred_z_range": [
+      0.8,
+      1.0
+    ],
+    "avoid_top": false,
+    "avoid_bottom": false,
+    "prefer_side": false,
+    "prefer_edge_or_corner": false,
+    "prefer_handle": false,
+    "prefer_middle_body": false
+  },
+  "confidence": 0.9
+}

@@ -1,0 +1,22 @@
+{
+  "object": "cracker box",
+  "task": "pick up the cracker box from the table",
+  "is_grasp_task": true,
+  "preferred_grasp_region": "side",
+  "avoid_grasp_region": "front",
+  "task_reason": "The cracker box has flat side and top surfaces suitable for grasping. The front face is significantly occluded by a white spray bottle in the foreground, making it difficult to access.",
+  "geometric_filter_hint": "Filter for points on the vertical side faces (especially the left side) or the top face. Exclude points in the front-center region occupied by the white bottle.",
+  "simple_rule": {
+    "preferred_z_range": [
+      0.0,
+      1.0
+    ],
+    "avoid_top": false,
+    "avoid_bottom": false,
+    "prefer_side": true,
+    "prefer_edge_or_corner": false,
+    "prefer_handle": false,
+    "prefer_middle_body": true
+  },
+  "confidence": 0.9
+}

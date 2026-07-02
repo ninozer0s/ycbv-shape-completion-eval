@@ -1,0 +1,22 @@
+{
+  "object": "mug",
+  "task": "pick up the mug for drinking",
+  "is_grasp_task": true,
+  "preferred_grasp_region": "handle",
+  "avoid_grasp_region": "bottom, rim",
+  "task_reason": "The handle is the most ergonomic and secure region for lifting a mug for drinking. The bottom is obstructed by the blue container and the rim is slippery.",
+  "geometric_filter_hint": "Filter for the protruding handle geometry on the right side or the main cylindrical body. Exclude the base region resting on the blue object.",
+  "simple_rule": {
+    "preferred_z_range": [
+      0.4,
+      0.9
+    ],
+    "avoid_top": false,
+    "avoid_bottom": true,
+    "prefer_side": true,
+    "prefer_edge_or_corner": false,
+    "prefer_handle": true,
+    "prefer_middle_body": true
+  },
+  "confidence": 0.95
+}

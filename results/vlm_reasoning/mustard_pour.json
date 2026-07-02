@@ -1,0 +1,22 @@
+{
+  "object": "mustard bottle",
+  "task": "pick up the mustard bottle to pour",
+  "is_grasp_task": true,
+  "preferred_grasp_region": "side",
+  "avoid_grasp_region": "cap, top",
+  "task_reason": "To pour from the bottle, the robot needs to hold the main body securely to stabilize the object and allow it to be tilted. The cap is small and slippery, making it unsuitable for a primary lifting grasp. The bottom base is flat and difficult to grasp for lifting.",
+  "geometric_filter_hint": "Filter for points on the vertical surface of the bottle body. Avoid the top cap region and the bottom base.",
+  "simple_rule": {
+    "preferred_z_range": [
+      0.2,
+      0.85
+    ],
+    "avoid_top": true,
+    "avoid_bottom": true,
+    "prefer_side": true,
+    "prefer_edge_or_corner": false,
+    "prefer_handle": false,
+    "prefer_middle_body": true
+  },
+  "confidence": 0.9
+}

@@ -1,0 +1,26 @@
+Offline VLM-based task-conditioned grasp filter demo
+==========================================================================================
+
+This is a proof-of-concept without robot execution.
+It uses sampled point-cloud candidates instead of real GraspGen proposals.
+The same filter can later be applied to real GraspGen candidate grasps.
+
+Evaluated candidates from samples: 18
+
+Baseline Top-1 task-valid rate:     88.89%
+VLM-filtered Top-1 task-valid rate: 94.44%
+
+Per object valid Top-1 rate [%]:
+                 baseline_valid  filtered_valid
+object                                         
+banana                      0.0            50.0
+cracker box               100.0           100.0
+mug                       100.0           100.0
+mustard bottle            100.0           100.0
+power drill               100.0           100.0
+tomato soup can           100.0           100.0
+
+Files:
+- results/task_grasp_filter_demo/task_grasp_filter_metrics.csv
+- results/task_grasp_filter_demo/task_grasp_filter_summary.txt
+- results/task_grasp_filter_demo/visualizations

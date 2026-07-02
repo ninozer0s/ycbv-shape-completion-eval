@@ -100,3 +100,18 @@ external/shape_comp/checkpoints/
 # Python cache
 __pycache__/
 *.pyc
+.api_key
+
+# local datasets / generated raw data
+bop_datasets/
+ycbv/
+ycbv_3dsgrasp_eval_filtered/
+*.pcd
+*.xyz
+*.ply
+*.npy
+*.pth
+*.pt
+*.ckpt
+external/PoinTr/ckpts/
+external/shape_comp/checkpoints/

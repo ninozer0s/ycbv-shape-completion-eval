@@ -1,0 +1,22 @@
+{
+  "object": "power drill",
+  "task": "pick up the drill to use it",
+  "is_grasp_task": true,
+  "preferred_grasp_region": "handle",
+  "avoid_grasp_region": "bottom",
+  "task_reason": "To operate the drill effectively, the user must grasp the handle to access the trigger and control the tool's orientation.",
+  "geometric_filter_hint": "Filter for points on the ergonomic handle grip; avoid the rectangular battery pack at the base.",
+  "simple_rule": {
+    "preferred_z_range": [
+      0.2,
+      0.6
+    ],
+    "avoid_top": false,
+    "avoid_bottom": true,
+    "prefer_side": false,
+    "prefer_edge_or_corner": false,
+    "prefer_handle": true,
+    "prefer_middle_body": false
+  },
+  "confidence": 0.95
+}

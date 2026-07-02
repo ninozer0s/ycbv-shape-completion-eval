@@ -1,0 +1,22 @@
+{
+  "object": "tomato soup can",
+  "task": "pick up the can from the table",
+  "is_grasp_task": true,
+  "preferred_grasp_region": "side",
+  "avoid_grasp_region": "top and bottom",
+  "task_reason": "The side of the cylindrical can offers the best surface area for a stable and secure grip to lift the object without risking damage to the opening or crushing the bottom.",
+  "geometric_filter_hint": "Select points on the curved lateral surface of the cylinder, avoiding the flat top and bottom faces.",
+  "simple_rule": {
+    "preferred_z_range": [
+      0.3,
+      0.7
+    ],
+    "avoid_top": true,
+    "avoid_bottom": true,
+    "prefer_side": true,
+    "prefer_edge_or_corner": false,
+    "prefer_handle": false,
+    "prefer_middle_body": true
+  },
+  "confidence": 0.95
+}
