@@ -4,3 +4,6 @@
 [submodule "external/PoinTr"]
 	path = external/PoinTr
 	url = https://github.com/yuxumin/PoinTr.git
+[submodule "external/shape_comp"]
+	path = external/shape_comp
+	url = https://github.com/OrebroUniversity/shape_comp.git
